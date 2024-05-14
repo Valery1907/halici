@@ -4,7 +4,7 @@ namespace Deployer;
 require 'recipe/cakephp.php';
 
 // Project name
-set('application', 'my_project');
+set('application', 'Halici');
 
 // Project repository
 set('repository', 'git@github.com:Valery1907/halici.git');
