@@ -22,7 +22,7 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('mittwald.com')
+host('ssh.gestringen.project.host')
     ->set('deploy_path', '~/{{application}}');    
     
 // Tasks
