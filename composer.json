@@ -1,0 +1,16 @@
+{
+    "name": "valerchik/halici",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Valerchik\\Halici\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "valera",
+            "email": "valera19079@gmail.com"
+        }
+    ],
+    "require": {}
+}
