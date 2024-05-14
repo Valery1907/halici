@@ -1,0 +1,74 @@
+.globalHeader {
+  background-image: url("/src/components/img/AllPhoto/20231024_küche&co_leopoldstadt-0005.jpeg");
+  // background: green;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.headerLogoBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centralHeaderBlock {
+  display: flex;
+  justify-content: center;
+  // width: 100%;
+  padding: 0 200px;
+  margin-top: 80px;
+}
+.buttonBlock {
+  width: 935px;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(239, 239, 239, 0.42);
+  font-size: 20px;
+  height: 18px;
+  margin-top: 15px;
+  padding: 0 32px;
+  margin-left: 80px;
+}
+.leftHeaderBlock {
+  width: 50%;
+  // height: 545px;
+  display: flex;
+  flex-direction: column;
+}
+.textHeader {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 2px 4px 3px 0px rgba(183, 183, 183, 0.5);
+  width: fit-content;
+  margin-top: 15px;
+  font-size: 50px;
+}
+.buttonBer {
+  width: 271px;
+  height: 43px;
+  background: rgba(197, 210, 13, 1);
+  border-radius: 10px;
+  font-size: 18px;
+  margin-top: 50px;
+}
+.sliderGlobal {
+  background: yellow;
+  width: 50%;
+  height: 100%;
+}
+.headerSubtitle {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 18px;
+  color: #d7d7d7;
+  margin-top: 40px;
+}
+.headerSecondSubtitle {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 8px;
+  margin-top: 102px;
+  color: #d7d7d7;
+}
