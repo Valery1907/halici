@@ -22,7 +22,7 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('halici.at')
+host('mittwald.com')
     ->set('deploy_path', '~/{{application}}');    
     
 // Tasks
