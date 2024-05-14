@@ -1,16 +1,14 @@
-import React from "react";
-import CardBlock from "./CardBlock/CardBlock";
-import s from "./index.module.scss";
+import Background from "../../img/AllPhoto/images.jpg";
 import { navItems } from "../../utils/fakeDate";
-import MitUnsBlock from "./MitUnsBlock";
+import CardBlock from "./CardBlock/CardBlock";
 import EsIsBlock from "./EsIsBlock";
+import FooterBlock from "./FooterBlock";
+import MapBlock from "./MapBlock";
+import MitUnsBlock from "./MitUnsBlock";
+import ResponseBlock from "./ResponseBlock";
 import UnserTeam from "./UnserTeam";
 import WerdenBlock from "./WerdenBlock";
-import WerdenTeilBlock from "./WerdenTeilBlock";
-import ResponseBlock from "./ResponseBlock";
-import MapBlock from "./MapBlock";
-import FooterBlock from "./FooterBlock";
-import Background from "../../img/AllPhoto/images.jpg";
+import s from "./index.module.scss";
 const BodyBlock = () => {
   return (
     <div
@@ -20,7 +18,7 @@ const BodyBlock = () => {
         backgroundSize: "cover"
       }}
     >
-      <div className="flex justify-center mt-[84px]">
+      <div className="flex justify-center ">
         <CardBlock items={navItems} />
       </div>
       <div className="mt-[110px]">
@@ -32,12 +30,12 @@ const BodyBlock = () => {
       <div id="aboutUs" className={s.teamBlock4}>
         <UnserTeam />
       </div>
-      <div className={s.werdenBlock5}>
+      <div id="galerie" className={s.werdenBlock5}>
         <WerdenBlock />
       </div>
-      <div className="flex justify-center mt-[82px]">
+      {/* <div className="flex justify-center mt-[82px]">
         <WerdenTeilBlock />
-      </div>
+      </div> */}
       <div className={s.mapBlock7}>
         <ResponseBlock />
       </div>
@@ -46,7 +44,7 @@ const BodyBlock = () => {
         <MapBlock />
       </div>
 
-      <div className={s.footerBlock8}>
+      <div id="kontakte" className={s.footerBlock8}>
         <FooterBlock />
       </div>
     </div>

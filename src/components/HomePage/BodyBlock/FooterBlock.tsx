@@ -1,11 +1,10 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/swiper-bundle.min.css";
-import Viterma from "../../img/image.png";
-import Kuche from "../../img/image copy.png";
-import { PhoneIcon } from "../../img/PhoneIcon";
 import { EmailIcon } from "../../img/EmailIcon";
 import { InstaIcon } from "../../img/InstaIcon";
+import { PhoneIcon } from "../../img/PhoneIcon";
+import Kuche from "../../img/image copy.png";
+import Viterma from "../../img/image.png";
 
 // SwiperCore.use([Pagination]);
 
@@ -18,7 +17,7 @@ const FooterBlock: React.FC<{}> = () => {
   const teamMembers = [
     { item: "Team Member 1" },
     { item: "Team Member 2" },
-    { item: "Team Member 3" },
+    { item: "Team Member 3" }
   ];
 
   return (
@@ -89,7 +88,7 @@ const FooterBlock: React.FC<{}> = () => {
           </div>
         </div>
         <div className=" mt-[47px] w-full flex flex-col items-center justify-center">
-          <div className="text-[50px] w-[444px] text-[#323232]  border-[#323232] border-b-[1px]">
+          <div className="text-[50px] flex justify-center w-[444px] text-[#323232]  border-[#323232] border-b-[1px]">
             Unsere Partner
           </div>
           <div className="mt-[52px] flex justify-around w-full">

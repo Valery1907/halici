@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Logo } from "../../img/Logo";
-import s from "./index.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TeamImage1 from "../../img/AllPhoto/Карусель осн. сторінки/9193bd73629eca9ef538a5f9a97e2e67.jpg";
-import TeamImage2 from "../../img/AllPhoto/Карусель осн. сторінки/pexels-quark-studio-2507016.jpg";
 import TeamImage3 from "../../img/AllPhoto/Карусель осн. сторінки/af6ffa23-a40d-4549-aed7-1835c612913c.jpg";
+import TeamImage2 from "../../img/AllPhoto/Карусель осн. сторінки/pexels-quark-studio-2507016.jpg";
 import TeamImage4 from "../../img/AllPhoto/Карусель осн. сторінки/pexels-vecislavas-popa-1571462.jpg";
+import { Logo } from "../../img/Logo";
+import s from "./index.module.scss";
 
 const HeaderBlock = () => {
   const teamMembers = [
@@ -39,11 +39,21 @@ const HeaderBlock = () => {
           <Logo />
         </div>
         <div className={s.buttonBlock}>
-          <div>Home</div>
-          <div>Leistung</div>
-          <div onClick={() => scrollToSection("aboutUs")}>Über Uns</div>
-          <div>Galerie</div>
-          <div>Kontakt</div>
+          <div style={{ cursor: "pointer" }}>Home</div>
+          <div style={{ cursor: "pointer" }}>Leistung</div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => scrollToSection("aboutUs")}
+          >
+            Über Uns
+          </div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => scrollToSection("galerie")}
+          >
+            Galerie
+          </div>
+          <div onClick={() => scrollToSection("kontakte")}>Kontakt</div>
         </div>
       </div>
       <div className={s.centralHeaderBlock}>
