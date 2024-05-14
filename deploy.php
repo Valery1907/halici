@@ -22,7 +22,7 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('halici.at.com')
+host('p-kzj5lu.project.space.com')
     ->set('deploy_path', '~/{{application}}');    
     
 // Tasks
