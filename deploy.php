@@ -23,7 +23,8 @@ add('writable_dirs', []);
 // Hosts
 
 host('ssh.gestringen.project.host')
-    ->set('deploy_path', '~/{{application}}');    
+    ->set('deploy_path', '~/{{application}}')
+    ->set('remote_user', 'ssh.gestringen.project.host@p-kzj5lu');
     
 // Tasks
 
