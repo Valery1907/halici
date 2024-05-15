@@ -89,7 +89,7 @@ const FooterBlock: React.FC<{}> = () => {
         </div>
         <div className=" mt-[47px] w-full flex flex-col items-center justify-center">
           <div className="text-[50px] flex justify-center w-[444px] text-[#323232]  border-[#323232] border-b-[1px]">
-            Unsere Partner
+            Unsere Partners
           </div>
           <div className="mt-[52px] flex justify-around w-full">
             <div>
