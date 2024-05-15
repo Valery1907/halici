@@ -27,7 +27,8 @@ host('valera19079@gmail.com@a-zdl1nu@ssh.gestringen.project.host')
     // ->set('remote_user', 'ssh.gestringen.project.host@p-kzj5lu');
     
 // Tasks
-
+mittwald_app('p-kzj5lu', hostname: 'valera19079@gmail.com@a-zdl1nu@ssh.gestringen.project.host')
+    ->set('branch', 'main');
 task('build', function () {
     run('cd {{release_path}} && build');
 });
