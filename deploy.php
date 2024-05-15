@@ -22,7 +22,7 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('ssh.gestringen.project.host')
+host('ssh.gestringen.project.host.com')
     ->set('deploy_path', '~/{{application}}')
     ->set('remote_user', 'ssh.gestringen.project.host@p-kzj5lu');
     
