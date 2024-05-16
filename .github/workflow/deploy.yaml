@@ -1,41 +1,29 @@
-name: Deploy Workflow
+steps:
+  - uses: actions/checkout@v4
 
-on:
-  push:
-    branches:
-      - main # Adjust branch name as needed
+  - name: Setup PHP
+    uses: shivammathur/setup-php@v2
+    with:
+      php-version: 8.2
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  - name: Install dependencies
+    run: composer install --prefer-dist --no-progress --no-suggest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  - name: Deploy SSH keys
+    env:
+      MITTWALD_SSH_PRIVATE_KEY: ${{ secrets.MITTWALD_SSH_PRIVATE_KEY }}
+      MITTWALD_SSH_PUBLIC_KEY: ${{ secrets.MITTWALD_SSH_PUBLIC_KEY }}
+    run: |
+      mkdir -p .mw-deploy
+      echo "${MITTWALD_SSH_PRIVATE_KEY}" > .mw-deploy/id_rsa
+      echo "${MITTWALD_SSH_PUBLIC_KEY}" > .mw-deploy/id_rsa.pub
+      chmod 600 .mw-deploy/id_rsa*
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.2
-
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest
-
-      - name: Deploy SSH keys
-        env:
-          MITTWALD_SSH_PRIVATE_KEY: ${{ secrets.MITTWALD_SSH_PRIVATE_KEY }}
-          MITTWALD_SSH_PUBLIC_KEY: ${{ secrets.MITTWALD_SSH_PUBLIC_KEY }}
-        run: |
-          mkdir -p .mw-deploy
-          echo "${MITTWALD_SSH_PRIVATE_KEY}" > .mw-deploy/halici
-          echo "${MITTWALD_SSH_PUBLIC_KEY}" > .mw-deploy/halici.pub
-          chmod 600 .mw-deploy/halici*
-
-      - name: Run deployer
-        run: |
-          ./vendor/bin/dep deploy \
-            -o mittwald_app_id=${{ secrets.MITTWALD_APP_ID }} \
-            -o mittwald_ssh_public_key_file=.mw-deploy/halici.pub \
-            -o mittwald_ssh_private_key_file=.mw-deploy/halici
-        env:
-          MITTWALD_API_TOKEN: ${{ secrets.MITTWALD_API_TOKEN }}
+  - name: Run deployer
+    run: |
+      ./vendor/bin/dep deploy \
+        -o mittwald_app_id={{ secrets.MITTWALD_APP_ID }} \
+        -o mittwald_ssh_public_key_file=.mw-deploy/id_rsa.pub \
+        -o mittwald_ssh_private_key_file=.mw-deploy/id_rsa
+    env:
+      MITTWALD_API_TOKEN: ${{ secrets.MITTWALD_API_TOKEN }}
