@@ -9,7 +9,7 @@ set('application', 'Halici');
 // Project repository
 set('repository', 'git@github.com:Valery1907/halici.git');
 
-// [Optional] Allocate tty for git clone. Default value is false.
+// [Optional] Allocate tty for git clone. Default value is false
 set('git_tty', true); 
 
 // Shared files/dirs between deploys 
