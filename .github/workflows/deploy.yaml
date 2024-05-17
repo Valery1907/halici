@@ -26,8 +26,11 @@ jobs:
           MITTWALD_SSH_PRIVATE_KEY: ${{ secrets.MITTWALD_SSH_PRIVATE_KEY }}
           MITTWALD_SSH_PUBLIC_KEY: ${{ secrets.MITTWALD_SSH_PUBLIC_KEY }}
         run: |
-        mkdir -p ~/.ssh
-        ssh-keyscan ssh.gestringen.project.host > ~/.ssh/known-hosts
+          mkdir -p ~/.ssh
+          echo "${MITTWALD_SSH_PRIVATE_KEY}" > ~/.ssh/halici
+          echo "${MITTWALD_SSH_PUBLIC_KEY}" > ~/.ssh/halici.pub
+          chmod 600 ~/.ssh/halici
+          chmod 644 ~/.ssh/halici.pub
 
       - name: Add SSH host key
         run: |
