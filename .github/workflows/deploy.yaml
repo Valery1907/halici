@@ -21,10 +21,14 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
-     - name: Deploy SSH host key
+      - name: Deploy SSH keys
+        env:
+          MITTWALD_SSH_PRIVATE_KEY: ${{ secrets.MITTWALD_SSH_PRIVATE_KEY }}
+          MITTWALD_SSH_PUBLIC_KEY: ${{ secrets.MITTWALD_SSH_PUBLIC_KEY }}
         run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan ssh.gestringen.project.host > ~/.ssh/known-hosts
+        mkdir -p ~/.ssh
+        ssh-keyscan ssh.gestringen.project.host > ~/.ssh/known-hosts
+
       - name: Add SSH host key
         run: |
           ssh-keyscan ssh.gestringen.project.host >> ~/.ssh/known_hosts
