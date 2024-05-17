@@ -21,17 +21,10 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Deploy SSH keys
-        env:
-          MITTWALD_SSH_PRIVATE_KEY: ${{ secrets.MITTWALD_SSH_PRIVATE_KEY }}
-          MITTWALD_SSH_PUBLIC_KEY: ${{ secrets.MITTWALD_SSH_PUBLIC_KEY }}
+     - name: Deploy SSH host key
         run: |
           mkdir -p ~/.ssh
-          echo "${MITTWALD_SSH_PRIVATE_KEY}" > ~/.ssh/halici
-          echo "${MITTWALD_SSH_PUBLIC_KEY}" > ~/.ssh/halici.pub
-          chmod 600 ~/.ssh/halici
-          chmod 644 ~/.ssh/halici.pub
-
+          ssh-keyscan ssh.gestringen.project.host > ~/.ssh/known-hosts
       - name: Add SSH host key
         run: |
           ssh-keyscan ssh.gestringen.project.host >> ~/.ssh/known_hosts
