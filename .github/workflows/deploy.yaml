@@ -37,7 +37,7 @@ jobs:
           ssh-keyscan ssh.gestringen.project.host >> ~/.ssh/known_hosts
       - name: Test SSH connection
         run: |
-          ssh -i ~/.ssh/halici -o StrictHostKeyChecking=no runner@ssh.gestringen.project.host "echo 'SSH connection successful'"
+          ssh -i ~/.ssh/halici -o "StrictHostKeyChecking no" runner@ssh.gestringen.project.host "echo 'SSH connection successful'"
 
       - name: Run deployer
         run: |
