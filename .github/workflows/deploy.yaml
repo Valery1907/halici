@@ -35,12 +35,17 @@ jobs:
       - name: Add SSH host key
         run: |
           mkdir -p ~/.ssh
-          echo "StrictHostKeyChecking no" >> ~/.ssh/known_hosts 
           ssh-keyscan ssh.gestringen.project.host >> ~/.ssh/known_hosts
+
+      - name: Configure SSH
+        run: |
+          echo "Host ssh.gestringen.project.host" >> ~/.ssh/config
+          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
 
       - name: Test SSH connection
         run: |
-          ssh -i ~/.ssh/halici runner@ssh.gestringen.project.host "echo 'SSH connection successful'"
+          ssh -i ~/.ssh/halici valera19079@gmail.com@e2d57b1f-f959-49d9-a3ed-e9f1e7d06604@ssh.gestringen.project.host "echo 'SSH connection successful'"
+        # Replace <your-username> with the correct username
 
       - name: Run deployer
         run: |
