@@ -35,7 +35,7 @@ jobs:
       - name: Add SSH host key
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan ssh.gestringen.project.host >> ~/.ssh/config
+          ssh-keyscan ssh.gestringen.project.host >> ~/.ssh/known_hosts
 
       - name: Configure SSH
         run: |
@@ -44,7 +44,7 @@ jobs:
 
       - name: Test SSH connection
         run: |
-          ssh -i ~/.ssh/halici valera19079@gmail.com@e2d57b1f-f959-49d9-a3ed-e9f1e7d06604@ssh.gestringen.project.host "echo 'SSH connection successful'"
+          ssh -i ~/.ssh/halici valera19079@e2d57b1f-f959-49d9-a3ed-e9f1e7d06604@ssh.gestringen.project.host "echo 'SSH connection successful'"
 
       - name: Run deployer
         run: |
