@@ -32,13 +32,6 @@ jobs:
           chmod 600 ~/.ssh/halici
           chmod 644 ~/.ssh/halici.pub
 
-      - name: Verify SSH key checksum
-        id: checksum
-        run: shasum -a 256 ~/.ssh/halici
-
-      - name: Output checksum
-        run: echo "SHA256 Checksum: ${{ steps.checksum.outputs.stdout }}"
-
       - name: Add SSH host key
         run: |
           mkdir -p ~/.ssh
