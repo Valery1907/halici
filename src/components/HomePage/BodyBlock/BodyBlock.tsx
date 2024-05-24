@@ -21,7 +21,7 @@ const BodyBlock = () => {
       <div className="flex justify-center ">
         <CardBlock items={navItems} />
       </div>
-      <div className="mt-[110px]">
+      <div className="mt-[111px]">
         <MitUnsBlock />
       </div>
       <div className={s.esIstBlock3}>
