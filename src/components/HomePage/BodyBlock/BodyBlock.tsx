@@ -18,7 +18,7 @@ const BodyBlock = () => {
         backgroundSize: "cover"
       }}
     >
-      <div className="flex justify-center mt-[84px]">
+      <div className="flex justify-center ">
         <CardBlock items={navItems} />
       </div>
       <div className="mt-[111px]">
