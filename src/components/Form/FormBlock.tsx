@@ -7,7 +7,7 @@ import {
   FormGroup,
   Typography
 } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import { Resolver, useForm } from "react-hook-form";
 import { z } from "zod";
 import Background from "../img/AllPhoto/images.jpg";
@@ -26,20 +26,23 @@ export declare const zodResolver: Resolver;
 const formSubroOrgSchema = z.object({
   organizationName: z.string().min(1, "miss Name"),
   email: z.string().email(),
-  password: z.string().min(8).max(100)
+  password: z.string().min(8).max(100),
+  kommentar: z.string(),
+  vorname: z.string(),
+  nachname: z.string(),
+  telefonnummer: z.string(),
 });
 
 const FormBlock: React.FC<{}> = () => {
-  const [rating, setRating] = useState(0);
-  const handleRatingChange = (newRating: number) => {
-    setRating(newRating);
-  };
-
   const form = useForm({
     defaultValues: {
       organizationName: "",
       email: "",
-      password: ""
+      password: "",
+      kommentar: "",
+      vorname: "",
+      nachname: "",
+      telefonnummer: "",
     }
     // resolver: zodResolver(formSubroOrgSchema),
   });

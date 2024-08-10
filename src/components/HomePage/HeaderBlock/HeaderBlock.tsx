@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import TeamImage1 from "../../img/AllPhoto/Карусель осн. сторінки/9193bd73629eca9ef538a5f9a97e2e67.jpg";
@@ -16,15 +15,6 @@ const HeaderBlock = () => {
     { img: TeamImage4 }
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.activeIndex);
-  };
-
-  const setSlideHeight = (index) => {
-    return { height: index === activeIndex ? "400px" : "300px" };
-  };
   const scrollToSection = (sectionId: any) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -84,7 +74,6 @@ const HeaderBlock = () => {
             //   slideShadows: false,
             //   modifier: 4
             // }}
-            onSlideChange={handleSlideChange}
           >
             {teamMembers.map((item, index) => (
               <SwiperSlide

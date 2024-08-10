@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -65,20 +65,6 @@ const UnserTeam: React.FC<{}> = () => {
       role: "Maler"
     }
   ];
-
-  const [swiper, setSwiper] = useState<number>();
-
-  const goNext = () => {
-    if (swiper) {
-      swiper.slideNext();
-    }
-  };
-
-  const goPrev = () => {
-    if (swiper) {
-      swiper.slidePrev();
-    }
-  };
 
   return (
     <div className=" text-[24px] flex flex-col mt-[200px] justify-center items-center">

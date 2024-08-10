@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import { Resolver, useForm } from "react-hook-form";
 import { z } from "zod";
 import {
@@ -15,20 +15,23 @@ export declare const zodResolver: Resolver;
 const formSubroOrgSchema = z.object({
   organizationName: z.string().min(1, "miss Name"),
   email: z.string().email(),
-  password: z.string().min(8).max(100)
+  password: z.string().min(8).max(100),
+  vorname: z.string(),
+  nachname: z.string(),
+  bewertung:z.string(),
 });
 
 const WerdenTeilBlock: React.FC<{}> = () => {
-  const [rating, setRating] = useState(0);
-  const handleRatingChange = (newRating: number) => {
-    setRating(newRating);
-  };
 
   const form = useForm({
     defaultValues: {
       organizationName: "",
       email: "",
-      password: ""
+      password: "",
+      vorname: "",
+      nachname: "",
+      telefonnummer: "",
+      bewertung: ""
     }
     // resolver: zodResolver(formSubroOrgSchema),
   });
@@ -36,14 +39,6 @@ const WerdenTeilBlock: React.FC<{}> = () => {
   async function onSubmit(values: z.infer<typeof formSubroOrgSchema>) {
     console.log("values:", values);
   }
-
-  const teamMembers = [
-    { item: "Team Member 1" },
-    { item: "Team Member 2" },
-    { item: "Team Member 3" },
-    { item: "Team Member 4" },
-    { item: "Team Member 5" }
-  ];
 
   return (
     <Form {...form}>
@@ -77,9 +72,7 @@ const WerdenTeilBlock: React.FC<{}> = () => {
                       InputProps={{
                         placeholder: "vorname",
                         style: {
-                          "&::placeholder": {
-                            color: "#4A4A4A80" // Placeholder text color
-                          }
+                          color: "#4A4A4A80" // Direct styling for text color
                         }
                       }}
                       {...field}
@@ -111,9 +104,7 @@ const WerdenTeilBlock: React.FC<{}> = () => {
                       InputProps={{
                         placeholder: "nachname",
                         style: {
-                          "&::placeholder": {
-                            color: "#4A4A4A80" // Placeholder text color
-                          }
+                          color: "#4A4A4A80" // Direct styling for text color
                         }
                       }}
                       {...field}
@@ -145,9 +136,7 @@ const WerdenTeilBlock: React.FC<{}> = () => {
                       InputProps={{
                         placeholder: "e-mail",
                         style: {
-                          "&::placeholder": {
-                            color: "#4A4A4A80" // Placeholder text color
-                          }
+                          color: "#4A4A4A80" // Direct styling for text color
                         }
                       }}
                       {...field}
@@ -180,9 +169,7 @@ const WerdenTeilBlock: React.FC<{}> = () => {
                       InputProps={{
                         placeholder: "bewertung",
                         style: {
-                          "&:placeholder": {
-                            color: "#4A4A4A80"
-                          }
+                          color: "#4A4A4A80" // Direct styling for text color
                         }
                       }}
                       multiline
