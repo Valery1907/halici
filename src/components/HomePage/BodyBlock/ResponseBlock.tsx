@@ -1,5 +1,4 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/swiper-bundle.min.css";
 
 // SwiperCore.use([Pagination]);
@@ -10,12 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 //   password: z.string().min(8).max(100),
 // });
 const ResponseBlock: React.FC<{}> = () => {
-  const teamMembers = [
-    { item: "Team Member 1" },
-    { item: "Team Member 2" },
-    { item: "Team Member 3" },
-  ];
-
+  
   return (
     <div className=" text-[24px] flex flex-col mt-[200px] justify-center items-center">
       <div className="mt-[63px] w-[700px]">

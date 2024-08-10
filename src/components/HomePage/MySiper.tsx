@@ -1,12 +1,9 @@
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination } from "swiper/modules";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const MySwiper = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>();
 
   return (
     <Swiper
@@ -14,9 +11,7 @@ const MySwiper = () => {
       effect={"coverflow"}
       grabCursor={true}
       centeredSlides={true}
-      onSlideChange={(e) => {
-        setCurrentSlide(e.realIndex);
-      }}
+    
       slideToClickedSlide={true}
       loop={true}
       slidesPerView={1.8}

@@ -14,11 +14,7 @@ import Viterma from "../../img/image.png";
 //   password: z.string().min(8).max(100),
 // });
 const FooterBlock: React.FC<{}> = () => {
-  const teamMembers = [
-    { item: "Team Member 1" },
-    { item: "Team Member 2" },
-    { item: "Team Member 3" }
-  ];
+  
 
   return (
     <div className="w-full text-[24px] flex flex-col mt-[50px] justify-center items-center">
