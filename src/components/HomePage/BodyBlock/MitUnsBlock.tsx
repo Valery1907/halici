@@ -1,6 +1,6 @@
 import React from "react";
-import { Diagram } from "../../img/Diagram";
 import { Link } from "react-router-dom";
+import { Diagram } from "../../img/Diagram";
 
 const MitUnsBlock: React.FC<{}> = () => {
   return (

@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import React, { useState } from "react";
 import { Resolver, useForm } from "react-hook-form";
 import { z } from "zod";
@@ -8,8 +9,6 @@ import {
   FormItem,
   FormMessage
 } from "../../utils/form";
-import { TextField } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 export declare const zodResolver: Resolver;
 

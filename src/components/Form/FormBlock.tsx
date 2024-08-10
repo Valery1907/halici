@@ -314,8 +314,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -326,8 +326,8 @@ const FormBlock: React.FC<{}> = () => {
                       <Checkbox
                         sx={{
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -339,8 +339,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -352,8 +352,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -365,8 +365,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -403,7 +403,7 @@ const FormBlock: React.FC<{}> = () => {
                 aria-controls="panel1-content"
                 id="panel1-header"
                 sx={{
-                  borderBottom: "1px solid #000000"
+                  borderBottom: "1px solid #000000",
                 }}
               >
                 <Typography>Küchen</Typography>
@@ -416,8 +416,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -428,8 +428,8 @@ const FormBlock: React.FC<{}> = () => {
                       <Checkbox
                         sx={{
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -441,8 +441,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -478,7 +478,7 @@ const FormBlock: React.FC<{}> = () => {
                 aria-controls="panel1-content"
                 id="panel1-header"
                 sx={{
-                  borderBottom: "1px solid #000000"
+                  borderBottom: "1px solid #000000",
                 }}
               >
                 <Typography>Bäder</Typography>
@@ -491,8 +491,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -503,8 +503,8 @@ const FormBlock: React.FC<{}> = () => {
                       <Checkbox
                         sx={{
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -516,8 +516,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -552,7 +552,7 @@ const FormBlock: React.FC<{}> = () => {
                 expandIcon={<ArrowDrop />}
                 sx={{
                   backgroundColor: "transparent",
-                  borderBottom: "1px solid #000000"
+                  borderBottom: "1px solid #000000",
                 }}
                 aria-controls="panel1-content"
                 id="panel1-header"
@@ -570,8 +570,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -582,8 +582,8 @@ const FormBlock: React.FC<{}> = () => {
                       <Checkbox
                         sx={{
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -595,8 +595,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }
@@ -608,8 +608,8 @@ const FormBlock: React.FC<{}> = () => {
                         sx={{
                           // color: pink[800],
                           "&.Mui-checked": {
-                            color: "black"
-                          }
+                            color: "black",
+                          },
                         }}
                       />
                     }

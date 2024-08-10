@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import SwiperCore from "swiper/core";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 // Install Swiper modules
 // SwiperCore.use([Navigation]);
 
@@ -23,9 +22,9 @@ import TeamImage12 from "../../img/AllPhoto/Наша команда/WhatsApp Ima
 
 import TeamImage13 from "../../img/AllPhoto/Наша команда/a191dd48-50b1-4b59-850b-ba8a9cf2d5ec.jpg";
 
+import TeamImage16 from "../../img/AllPhoto/Наша команда/Frame 58.png";
 import TeamImage14 from "../../img/AllPhoto/Наша команда/Frame 59.jpg";
 import TeamImage15 from "../../img/AllPhoto/Наша команда/viterma-Christine-Krumböck-960x960.jpg";
-import TeamImage16 from "../../img/AllPhoto/Наша команда/Frame 58.png";
 
 const UnserTeam: React.FC<{}> = () => {
   const teamMembers = [

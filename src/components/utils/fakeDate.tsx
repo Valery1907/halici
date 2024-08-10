@@ -1,10 +1,10 @@
-import Service1 from "../img/AllPhoto/Список послуг/malerei-nico-renovierung-1024x576.webp";
 import Service2 from "../img/AllPhoto/Список послуг/fussboden-belag-holzboden-670716584-istock.jpg";
+import Service1 from "../img/AllPhoto/Список послуг/malerei-nico-renovierung-1024x576.webp";
 
-import Service3 from "../img/AllPhoto/Список послуг/unebene-wand-tapezieren-titel.jpg";
+import Service6 from "../img/AllPhoto/Список послуг/8.jpg";
 import Service4 from "../img/AllPhoto/Список послуг/photo_1_2023-09-28_14-56-06.jpg";
 import Service5 from "../img/AllPhoto/Список послуг/photo_21_2023-09-28_14-55-35.jpg";
-import Service6 from "../img/AllPhoto/Список послуг/8.jpg";
+import Service3 from "../img/AllPhoto/Список послуг/unebene-wand-tapezieren-titel.jpg";
 
 // import TeamImage2 from "../../img/AllPhoto/Наша команда/20231024_küche&co_leopoldstadt-0037.jpeg";
 // import TeamImage3 from "../../img/AllPhoto/Наша команда/20231024_küche&co_leopoldstadt-0047.jpeg";

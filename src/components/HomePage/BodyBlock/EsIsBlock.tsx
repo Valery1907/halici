@@ -1,5 +1,4 @@
 import React from "react";
-import { Diagram } from "../../img/Diagram";
 import TeamImage from "../../img/TeamImg/image.png";
 
 const EsIsBlock: React.FC<{}> = () => {
